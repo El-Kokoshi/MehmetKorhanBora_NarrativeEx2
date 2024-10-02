@@ -1,0 +1,82 @@
+﻿title: ScriptYarn1
+tags:
+position: 38,-408
+---
+Scientist: Hello, can you hear me?
+    -> Who are you, where am I?
+        Scientist: Can you hear me well?
+            -> Yes.
+                <<jump Yes>>
+            -> Let me go!
+                <<jump LetMeGo>>
+    -> Yes I can.
+        Scientist: Excellent, please stand up.
+            <<jump Excellent>>
+===
+
+title: Yes
+position: -480,-125
+---
+Scientist: Excellent, please stand up.
+    <<jump Excellent>>
+===
+
+title: LetMeGo
+position: 267,95
+---
+Scientist: We might need to sedate the patient.
+Scientist: Quickly! Sedate him before he starts walking.
+<<jump Jump2>>
+===
+
+title: Excellent
+position: -196,92
+---
+Scientist: Please walk 10 steps forward.
+Scientist: And then walk back.
+    -> Start walking.
+        <<jump Walk2>>
+    -> Start jumping
+        <<jump Jump>>
+===
+
+title: Jump
+position: -41,486
+---
+Scientist: Walk Please.
+    -> Start walking.
+        <<jump Walk2>>
+    -> Keep jumping
+        <<jump Jump2>>
+===
+
+title: Walk
+position: -338,1039
+---
+Scientist: Excellent ...
+Narrator: A huge explosion cuts the voice abruptly.
+Narrator: Your door is blown off during the explosion.
+Narrator: Something is staring at you behind the smokes.
+Narrator: Get ready for a fight!
+Narrator: The End!
+===
+
+title: Walk2
+position: -338,774
+---
+Scientist: Excellent, please start jumping.
+    -> Start jumping.
+        <<jump Walk>>
+    -> Keep Walking.
+        <<jump Jump2>>
+===
+
+title: Jump2
+position: 346,868
+---
+Scientist: You asked for it.
+Scientist: Get him boys!
+Narrator: The door to your room slowly starts opening.
+Narrator: Get ready for a fight!
+Narrator: The End!
+===
